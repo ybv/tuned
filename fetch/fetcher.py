@@ -7,8 +7,12 @@ import datetime
 import concurrent.futures
 import requests
 import json
+import ConfigParser
 
-c = MongoClient("mongodb://tuned:tuned@ds033750.mongolab.com:33750/tuned-db")
+Config = ConfigParser.ConfigParser()
+Config.read("/etc/tunedmongo.conf")
+uri = Config.get("mongo", "uri")
+c = MongoClient(uri)
 db = c['tuned-db']
 
 def get_links_from_rss_feed(url):
