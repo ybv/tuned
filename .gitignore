@@ -1,0 +1,6 @@
+fetch/venv/
+enrich/venv/
+.DS_Store
+*~
+\#*#
+*.pyc

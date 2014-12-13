@@ -1,0 +1,23 @@
+{
+    "india":{
+	"indiatoday":{
+	    "url":"http://indiatoday.intoday.in/",
+	    "rss_home":"http://indiatoday.intoday.in/rssFeed.jsp",
+	    "feeds":[
+		"http://indiatoday.feedsportal.com/c/33614/f/589699/index.rss?http://indiatoday.intoday.in/rss/homepage-topstories.jsp",
+		"http://indiatoday.feedsportal.com/c/33614/f/589702/index.rss?http://indiatoday.intoday.in/rss/article.jsp?sid=36"
+		]
+	}
+    },
+    "usa":{
+    },
+    "africa":{
+	"allafrica":{
+	    "url":"",
+	    "rss_home":"http://allafrica.com/misc/tools/rss.html",
+	    "feeds":[
+		"http://allafrica.com/tools/headlines/rdf/latest/headlines.rdf"
+	    ]
+	}
+    }	
+}
