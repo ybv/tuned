@@ -4,3 +4,4 @@ enrich/venv/
 *~
 \#*#
 *.pyc
+.#*
