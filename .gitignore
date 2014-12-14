@@ -1,5 +1,6 @@
 fetch/venv/
 enrich/venv/
+enrich/MITIE/
 .DS_Store
 *~
 \#*#
