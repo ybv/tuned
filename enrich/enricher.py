@@ -3,6 +3,7 @@ import ConfigParser
 import concurrent.futures
 from geopy.geocoders import Nominatim
 from pymongo import MongoClient
+from bson.objectid import ObjectId
 import collections
 
 Config = ConfigParser.ConfigParser()
@@ -61,9 +62,10 @@ def enrich_article(article_id,article_text,country):
                 
         if 'LOCATION' in meta:
             geo_data = [get_geo(loc) for loc in meta['LOCATION']]
-            
-        if geo_data:
-            print geo_data
+            meta['geo'] = geo_data
+
+        res = db.posts.update({'_id':article_id},{"$set":meta})
+        print db.posts.find_one({"_id":{"oid":article_id}})
             
     except Exception as e:
         print e
